@@ -3,6 +3,7 @@ layout: post
 title:  "Vectors, matrices & matrix order"
 date:   2023-01-19 11:55:12 +0000
 categories: vectors matrices graphics
+math: true
 ---
 
 {% include head.html %}
