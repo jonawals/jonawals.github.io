@@ -12,7 +12,7 @@ In this post I will attempt to demystify a topic that is the source of confusion
 
 ## Matrices & vectors
 
-An $$n \cdot m$$ matrix consists of $$n$$ rows and $$m$$ columns. The product of two matrices $$\mathbf{A}$$ and $$\mathbf{B}$$ is well defined when the number of columns in $$\mathbf{A}$$ matches the number of rows in $$\mathbf{B}$$. Their product is a matrix with the number of rows of $$\mathbf{A}$$ and the number of columns of $$\mathbf{B}$$. Thus, for a given $$2×3$$ matrix $$\mathbf{A}$$ to be multiplied with a given $$3×2$$ matrix $$\mathbf{B}$$, the product is calculated as follows to produce the resulting $$2×2$$ matrix:
+An $n \cdot m$ matrix consists of $n$ rows and $m$ columns. The product of two matrices $\mathbf{A}$ and $\mathbf{B}$ is well defined when the number of columns in $\mathbf{A}$ matches the number of rows in $\mathbf{B}$. Their product is a matrix with the number of rows of $\mathbf{A}$ and the number of columns of $\mathbf{B}$. Thus, for a given $2×3$ matrix $\mathbf{A}$ to be multiplied with a given $3×2$ matrix $\mathbf{B}$, the product is calculated as follows to produce the resulting $2×2$ matrix:
 
 $$
 \begin{array}{l@{}l}
@@ -31,7 +31,7 @@ Or columns:
 
 $$\vec{c} = \begin{bmatrix} c_{1} \\ c_{2} \\ c_{3} \\ ... \\ c_{m}  \end{bmatrix}$$
 
-The vector-matrix product follows the same rules as the matrix product, albeit treating row vectors as $$1×m$$ matrices and column vectors as $$m×1$$ matrices. Thus, for a given $$2×2$$ matrix $$\mathbf{M}$$ to be multiplied with a given $$1×2$$ row vector $$\vec{r}$$, we must ensure that the number of columns of the matrix on the left hand side matches the number of rows of the matrix on the right hand side. We achieve this by pre-multiplying the vector $$\vec{r}$$ with $$\mathbf{M}$$, resulting in a $$1×2$$ matrix:
+The vector-matrix product follows the same rules as the matrix product, albeit treating row vectors as $1×m$ matrices and column vectors as $m×1$ matrices. Thus, for a given $2×2$ matrix $\mathbf{M}$ to be multiplied with a given $1×2$ row vector $\vec{r}$, we must ensure that the number of columns of the matrix on the left hand side matches the number of rows of the matrix on the right hand side. We achieve this by pre-multiplying the vector $\vec{r}$ with $\mathbf{M}$, resulting in a $1×2$ matrix:
 
 $$
 \begin{array}{l@{}l}
@@ -43,7 +43,7 @@ r_{1}m_{12} + r_{2}m_{22} \end{bmatrix}
 \end{array}
 $$
 
-In order to multiply a column vector by the same matrix, we must ensure that the number of columns of the matrix on the left hand side matches the number of rows of the matrix on the right hand side. We achieve this by post-multiplying the vector $$\vec{c}$$ with $$\mathbf{M}$$, resulting in a $$2×1$$ matrix:
+In order to multiply a column vector by the same matrix, we must ensure that the number of columns of the matrix on the left hand side matches the number of rows of the matrix on the right hand side. We achieve this by post-multiplying the vector $\vec{c}$ with $\mathbf{M}$, resulting in a $2×1$ matrix:
 
 $$
 \begin{array}{l@{}l}
@@ -56,11 +56,11 @@ m_{12}c_{2} + m_{22}c_{2} \end{bmatrix}
 \end{array}
 $$
 
-However, due to the non-commutativity of matrix multiplication, $$\vec{r} \cdot \mathbf{M}$$ may not equal to $$\mathbf{M} \cdot \vec{c}$$ as the two products are necessarily not equivalent:
+However, due to the non-commutativity of matrix multiplication, $\vec{r} \cdot \mathbf{M}$ may not equal to $\mathbf{M} \cdot \vec{c}$ as the two products are necessarily not equivalent:
 
 $$
  \begin{bmatrix} 1 & 0 & 1 \end{bmatrix} \cdot \begin{bmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \\ 3 & 0 & 3 \end{bmatrix}     \neq \begin{bmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \\ 3 & 0 & 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix}
- $$
+$$
 
  The row vector product is as follows:
 
@@ -74,7 +74,7 @@ $$
 \begin{bmatrix} 1 & 0 & 1 \\ 0 & 2 & 0 \\ 3 & 0 & 3 \end{bmatrix} \cdot \begin{bmatrix} 1 \\ 0 \\ 1 \end{bmatrix} =  \begin{bmatrix} 2 & 0 & 6 \end{bmatrix}
 $$
 
-Furthermore, the dimensions of $$\mathbf{M}$$ may be well defined for $$\vec{r} \cdot \mathbf{M}$$ but not necessarily for $$\mathbf{M} \cdot \vec{c}$$. Thus, in order to make $$\mathbf{M} \cdot \vec{c}$$ well-defined and equivalent to $$\vec{r} \cdot \mathbf{M}$$, we must multiply $$\vec{c}$$ by the transpose of $$\mathbf{M}$$, such that $$\vec{r} \cdot \mathbf{M} = \mathbf{M^T} \cdot \vec{c}$$ (and visa versa):
+Furthermore, the dimensions of $\mathbf{M}$ may be well defined for $\vec{r} \cdot \mathbf{M}$ but not necessarily for $\mathbf{M} \cdot \vec{c}$. Thus, in order to make $\mathbf{M} \cdot \vec{c}$ well-defined and equivalent to $\vec{r} \cdot \mathbf{M}$, we must multiply $\vec{c}$ by the transpose of $\mathbf{M}$, such that $\vec{r} \cdot \mathbf{M} = \mathbf{M^T} \cdot \vec{c}$ (and visa versa):
 
 $$
 \begin{array}{l@{}l}
@@ -104,7 +104,7 @@ const std::size_t n = 4;
 const int array[n] = {1, 2, 3, 4};
 ```
 
-The elements in the array are accessed by an index in the range $$[0,n)$$ (square bracket are including, parentheses are excluding), where $$n$$ is the number of elements in the array. Incrementing the index $$i$$ in the range $$[0,n)$$ will access each element in the array sequentially:
+The elements in the array are accessed by an index in the range $[0,n)$ (square bracket are including, parentheses are excluding), where $n$ is the number of elements in the array. Incrementing the index $i$ in the range $[0,n)$ will access each element in the array sequentially:
 
 ```c++
 // prints
@@ -123,7 +123,7 @@ const std::size_t n = 4;
 const int array[m][n] = { {1, 2, 3, 4}, {5, 6, 7, 8} };
 ```
 
-The elements in the array are accessed by a pair of indices where the first, or *major*, index is in the range $$[0,m)$$ (where $$m$$ is the number of one dimensional arrays in the array). It accesses the one dimensional arrays in the collection. The second, or *minor*, index in the range $$[0,n)$$ (where $$n$$ is the number of elements in each one dimensional array) accesses the elements in the one dimensional array specified by $$m$$. Incrementing the major index $$j$$ in the range $$[0,m)$$ in an outer loop and the minor index $$i$$ in the range $$[0,n)$$ in an inner loop will access each element in each one dimensional array sequentially:
+The elements in the array are accessed by a pair of indices where the first, or *major*, index is in the range $[0,m)$ (where $m$ is the number of one dimensional arrays in the array). It accesses the one dimensional arrays in the collection. The second, or *minor*, index in the range $[0,n)$ (where $n$ is the number of elements in each one dimensional array) accesses the elements in the one dimensional array specified by $m$. Incrementing the major index $j$ in the range $[0,m)$ in an outer loop and the minor index $i$ in the range $[0,n)$ in an inner loop will access each element in each one dimensional array sequentially:
 
 ```c++
 // prints 
@@ -140,7 +140,7 @@ for(std::size_t j = 0; j < m; j++)
 }
 ```
 
-As two dimensional arrays are effectively one dimensional arrays under the hood with syntax sugar for indexing them in two dimensions, we can also declare a flat one dimensional array of size $$m \cdot n$$, where $$m$$ is the number of equally sized one dimensional arrays and $$n$$ is the number of elements in each one dimensional array. We can then access the elements as if it were a two dimensional array using the function $$f(j,i) = j \cdot n + i$$:
+As two dimensional arrays are effectively one dimensional arrays under the hood with syntax sugar for indexing them in two dimensions, we can also declare a flat one dimensional array of size $m \cdot n$, where $m$ is the number of equally sized one dimensional arrays and $n$ is the number of elements in each one dimensional array. We can then access the elements as if it were a two dimensional array using the function $f(j,i) = j \cdot n + i$:
 
 ```c++
 const std::size_t m = 2;
@@ -167,9 +167,9 @@ $$
 \begin{bmatrix} a & b & c & d \\ e & f & g & h \\ i & j & k & l \end{bmatrix}
 $$
 
-The above is a $$3×4$$ matrix of $$12$$ elements. We can read a given element in the matrix by specifying which row and column it is located at. For example, element $$g$$ is located in the 2<sup>nd</sup> row and 3<sup>rd</sup> column. Accessing the elements of a mathematical matrix by specifying the row and column in which the element resides is an unambiguous operation.
+The above is a $3×4$ matrix of $12$ elements. We can read a given element in the matrix by specifying which row and column it is located at. For example, element $g$ is located in the 2<sup>nd</sup> row and 3<sup>rd</sup> column. Accessing the elements of a mathematical matrix by specifying the row and column in which the element resides is an unambiguous operation.
 
-We can interpret two dimensional arrays (or flat one dimensional arrays of size $$m \cdot n$$, the distinction isn’t important) as tabular data consisting of a number of rows and columns. This lends itself well to the implementation of matrices in C++ as we can then use our major and minor indices to access the specific elements of our matrix. However, without any context, accessing the elements in the array representation of a matrix using the major and minor indices is ambiguous. Consider the matrix above as represented by a two dimensional array. What will the output of the code snippet below be?
+We can interpret two dimensional arrays (or flat one dimensional arrays of size $m \cdot n$, the distinction isn’t important) as tabular data consisting of a number of rows and columns. This lends itself well to the implementation of matrices in C++ as we can then use our major and minor indices to access the specific elements of our matrix. However, without any context, accessing the elements in the array representation of a matrix using the major and minor indices is ambiguous. Consider the matrix above as represented by a two dimensional array. What will the output of the code snippet below be?
 
 ```c++
 for(std::size_t j = 0; j < m; j++)
