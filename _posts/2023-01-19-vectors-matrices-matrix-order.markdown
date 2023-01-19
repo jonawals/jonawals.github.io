@@ -573,7 +573,7 @@ If we were to store our matrices in the natural matrix order of C++ but access t
 
 ```c++
 const std::size_t rows = 3;
-const std::size_t cols = std::hardware_destructive_interference_size;
+const std::size_t cols = std::hardware_destructive_interference_size / sizeof(std::size_t);
 
 // initialized elsewhere...
 const char rowMajor[rows][cols];
