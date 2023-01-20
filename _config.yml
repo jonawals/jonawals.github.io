@@ -21,7 +21,7 @@
 title: The Code Cabin
 #email: jonawalsl@amazon.com
 description: >- # this means to ignore newlines until "baseurl:"
-  An ongoing gametech development blog.
+  An ongoing audio and gametech development blog.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jonawals
