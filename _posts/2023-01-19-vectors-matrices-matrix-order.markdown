@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Vectors, matrices & matrix order"
-date:   2023-01-19 11:55:12 +0000
-categories: vectors matrices graphics
+title: "Vectors, matrices & matrix order"
+date: 2023-01-19 11:55:12 +0000
+tags: gametech math theory
+categories: gametech
 math: true
 ---
 
