@@ -1,13 +1,11 @@
 ---
-layout: post
+layout: single
 title: "Vectors, matrices & matrix order"
 date: 2023-01-19 11:55:12 +0000
 tags: gametech math theory
 categories: gametech
 math: true
 ---
-
-{% include head.html %}
 
 In this post I will attempt to demystify a topic that is the source of confusion for a lot of people as they dip their toes into learning the concepts that underpin computer graphics: vectors, matrices and matrix order.
 
