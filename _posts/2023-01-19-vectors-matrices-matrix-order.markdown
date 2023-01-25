@@ -162,11 +162,11 @@ for(std::size_t j = 0; j < m; j++)
 
 ## Arrays as matrices
 
+The matrix below is a $3×4$ matrix of $12$ elements. We can read a given element in the matrix by specifying which row and column it is located at. For example, element $g$ is located in the 2<sup>nd</sup> row and 3<sup>rd</sup> column. Accessing the elements of a mathematical matrix by specifying the row and column in which the element resides is an unambiguous operation.
+
 $$
 \begin{bmatrix} a & b & c & d \\ e & f & g & h \\ i & j & k & l \end{bmatrix}
 $$
-
-The above is a $3×4$ matrix of $12$ elements. We can read a given element in the matrix by specifying which row and column it is located at. For example, element $g$ is located in the 2<sup>nd</sup> row and 3<sup>rd</sup> column. Accessing the elements of a mathematical matrix by specifying the row and column in which the element resides is an unambiguous operation.
 
 We can interpret two dimensional arrays (or flat one dimensional arrays of size $m \cdot n$, the distinction isn’t important) as tabular data consisting of a number of rows and columns. This lends itself well to the implementation of matrices in C++ as we can then use our major and minor indices to access the specific elements of our matrix. However, without any context, accessing the elements in the array representation of a matrix using the major and minor indices is ambiguous. Consider the matrix above as represented by a two dimensional array. What will the output of the code snippet below be?
 
@@ -273,7 +273,7 @@ You’ll notice that the row-major and column-major arrays of the same matrix ar
 
 ## Putting the theory into practice
 
-# Matrix products
+### Matrix products
 
 As we’ve seen in the previous sections, there is no concept in the mathematical sense of a “row major matrix” or a “column major matrix” as this is purely a function of how we map our mathematical matrices to memory (and thus code). However, the implementation of matrix multiplication logic does differ depending on whether we are storing our matrices in row major or column major. 
 
@@ -406,7 +406,7 @@ for (std::size_t c = 0; c < rhsCols; c++)
 }
 ```
 
-# Vector-matrix products
+### Vector-matrix products
 
 Consider the following product between a row vector and a matrix:
 
