@@ -509,7 +509,7 @@ When laid out in row-major in a two dimensional array, the array is initialized 
 const float Sx = 2.f;
 const float Sy = 4.f
 
-// Rotation of approx. 90 degrees (in radians)
+// Rotation of approx. 45 degrees (in radians)
 const float theta = 0.707;
 
 // Translation of -5 along x axis and 10 along y axis
@@ -541,7 +541,7 @@ When laid out in column-major in a two dimensional array, the array is initializ
 const float Sx = 2.f;
 const float Sy = 4.f
 
-// Rotation of approx. 90 degrees (in radians)
+// Rotation of approx. 45 degrees (in radians)
 const float theta = 0.707;
 
 // Translation of -5 along x axis and 10 along y axis
