@@ -7,7 +7,7 @@ categories: gametech
 math: true
 ---
 
-This is a repost of an article I wrote for the o3de.org [blog](https://www.o3de.org/blog/). The original version of the article can be accessed [here](https://www.o3de.org/blog/posts/vectors-matrices-matrix-order/).
+This article is a repost of an article I wrote for the o3de.org [blog](https://www.o3de.org/blog/). The original version of the article can be accessed [here](https://www.o3de.org/blog/posts/vectors-matrices-matrix-order/).
 
 ---
 
